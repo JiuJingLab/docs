@@ -4,9 +4,9 @@
 
 ## 仍需具備
 
-- 發佈用 Apple Developer Team 與已註冊 Bundle ID；帳號需有 App Store Connect 發佈權限。
+- 已註冊 Bundle ID `org.jiujinglab.ios`，已建立「揪鏡 JiuJing」App 記錄（Apple ID `6817397936`）。
 - Xcode 登入該帳號，完成 Apple 端要求的必要合約；不要將密碼／API 私鑰提交到 repo。
-- App Store Connect 建立揪鏡 App 記錄，Bundle ID 與建置一致；提供 Beta Review 聯絡人及信箱。
+- 外部測試送審時仍需發佈者提供真實 Beta Review 聯絡姓名、電話及信箱。
 - 依 `device-validation.md` 完成真實 BLE／區網／權限驗收。
 - 外部 TestFlight 測試須經 Apple 的 Beta App Review；上傳成功不等於已可供外部測試。
 
@@ -39,6 +39,8 @@ DEVELOPMENT_TEAM=你的十碼TeamID BUNDLE_ID=org.jiujinglab.ios ./scripts/archi
 
 ## 本次發佈嘗試
 
-已嘗試 Xcode 自動簽署，回報 `No Accounts: Add a new account in Accounts settings` 及缺少本 App 的 provisioning profile。App Store Connect 網頁已登入，但 Xcode 帳號仍未完成設定。本機既有其他 App 的 profile 不能替代此 App 的發佈設定。請先登入發佈用 Apple 帳號，再重試簽署、建立 App 記錄與上傳。
+已嘗試 Xcode 自動簽署，回報 `No Accounts: Add a new account in Accounts settings` 及缺少本 App 的 provisioning profile。App Store Connect 網頁已登入，但 Xcode 帳號仍未完成設定。本機既有其他 App 的 profile 不能替代此 App 的發佈設定。請在 Xcode 登入發佈用 Apple 帳號，再重試簽署與上傳。2026-09-29 重試仍回報相同錯誤；目前沒有已上傳建置。
+
+[TestFlight 管理頁](https://appstoreconnect.apple.com/apps/6817397936/testflight)。公開隱私政策及支援頁均已部署至 GitHub Pages 並驗證 HTTP 200。
 
 Apple 參考：[TestFlight overview](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview/)、[Upload builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)。
