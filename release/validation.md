@@ -14,8 +14,6 @@
 | 自動簽署 archive | 失敗：Xcode `No Accounts`，且無 `org.jiujinglab.ios` matching provisioning profile |
 | TestFlight build | 尚未上傳，沒有可供測試的 TestFlight 連結 |
 | 真實 iPhone BLE／LAN／權限 | 尚未執行；本機列出的 iPhone 為 unavailable |
-| 報名資料 | 痛點 36 字、理念 251 字、21 欄；表格可開啟、複製按鈕有回饋及手動選取備援 |
-| 影片／報名送出 | 劇本完成；未錄製影片、未上傳 YouTube、未正式送出報名 |
 
 本輪 iPhone 完整 14 項測試結果位於 `build/V01Review.xcresult`；iPad 2 項 UI 測試結果位於 `build/V01iPad.xcresult`。原始 xcresult 及 QA 截圖只留在本機，不提交：模擬器可能帶有既有帳號的系統提示。詳情頁測試使用明確標示的 DEBUG 模擬資料，不能當作實機偵測證據。
 
