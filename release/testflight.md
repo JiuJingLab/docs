@@ -42,8 +42,8 @@ DEVELOPMENT_TEAM=你的十碼TeamID BUNDLE_ID=org.jiujinglab.ios ./scripts/archi
 - 版本 `0.1.0 (1)`，Bundle ID `org.jiujinglab.ios`，Apple ID `6817397936`。
 - iPhone Simulator 9 項核心測試及 5 項 UI 測試全部通過（`TestFlightFinal.xcresult`）。
 - Release archive 簽署成功；Xcode 上傳回報 `Upload succeeded`、`EXPORT SUCCEEDED`。
-- Apple 正在處理建置，尚未開放外部測試或公開連結。
-- Beta 描述、行銷 URL、隱私政策 URL 及審查備註已於 App Store Connect 儲存。
+- Apple 處理狀態為「完成」；`0.1.0 (1)` 已加入 `v0.1 Internal QA` 群組，帳號持有人狀態為「已邀請」。內部測試可透過 TestFlight 邀請安裝，外部測試與公開連結尚未開放。
+- Beta 描述、行銷 URL、隱私政策 URL、審查備註及建置測試內容均已於 App Store Connect 儲存。
 - 外部測試仍需真實審查聯絡資料及必要的 Apple Beta App Review。
 - 原始碼含核定 Logo，已合併 [PR #3](https://github.com/JiuJingLab/ios/pull/3)。
 

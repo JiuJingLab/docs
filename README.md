@@ -13,6 +13,6 @@ v0.1 使用手機本機的區網服務探索與 BLE 廣播線索，不能確認�
 
 ## 目前狀態
 
-2026-09-30：iOS main 已更新，14 項 Simulator 測試通過。`0.1.0 (1)` 已成功簽署並上傳 App Store Connect，Apple 正在處理；公開測試連結尚未開放。最新狀態見 [TestFlight 發佈資訊](release/testflight.md)。
+2026-09-30：iOS main 已更新，14 項 Simulator 測試通過。`0.1.0 (1)` 已成功簽署並上傳 App Store Connect，Apple 已完成處理並開放內部測試，帳號持有人已獲邀；公開測試連結尚未開放。最新狀態見 [TestFlight 發佈資訊](release/testflight.md)。
 
 [揪鏡官網](https://jiujinglab.github.io/website/) · [網站 repo](https://github.com/JiuJingLab/website)

@@ -11,8 +11,8 @@
 | App 圖示 | 修復 headless AppKit 產生全黑圖示；CoreGraphics 產圖、像素斷言及視覺檢查通過 |
 | Release 測試資料隔離 | 已檢查 Release binary，不含 DEBUG fixture 啟動參數及識別字 |
 | Release iOS archive（未簽署） | 通過；`build/V01Validated-unsigned.xcarchive` 僅供建置驗證，不能上傳或安裝 |
-| 自動簽署 archive | 失敗：Xcode `No Accounts`，且無 `org.jiujinglab.ios` matching provisioning profile |
-| TestFlight build | 尚未上傳，沒有可供測試的 TestFlight 連結 |
+| 自動簽署 archive | 2026-09-30 重試成功；`build/JiuJing.xcarchive`，0.1.0 (1) |
+| TestFlight build | 2026-09-30 上傳及 Apple 處理完成；已加入內部群組，帳號持有人已獲邀；外部公開連結尚未開放 |
 | 真實 iPhone BLE／LAN／權限 | 尚未執行；本機列出的 iPhone 為 unavailable |
 
 本輪 iPhone 完整 14 項測試結果位於 `build/V01Review.xcresult`；iPad 2 項 UI 測試結果位於 `build/V01iPad.xcresult`。原始 xcresult 及 QA 截圖只留在本機，不提交：模擬器可能帶有既有帳號的系統提示。詳情頁測試使用明確標示的 DEBUG 模擬資料，不能當作實機偵測證據。
@@ -20,3 +20,5 @@
 不需要 App Intents 的本專案會出現 Xcode「Metadata extraction skipped. No AppIntents.framework dependency found.」工具提示；編譯、連結及測試均通過。沒有用 npm／pip／Cargo 依賴，未執行不適用的 package audit。
 
 須完成 `device-validation.md` 的實機項目，才能宣稱已驗證真實硬體偵測。App 尚未經 Apple Beta App Review 或 App Store Review。
+
+2026-09-30 發佈前以新版 Logo 再跑 9 核心測試及 5 UI 測試，全部通過，結果為 `build/TestFlightFinal.xcresult`。
