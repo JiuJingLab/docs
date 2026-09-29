@@ -1,11 +1,11 @@
 # TestFlight 發佈資料
 
-版本 0.1.0，build 1，預設 Bundle ID `org.jiujinglab.ios`。目前尚未上傳 TestFlight；必須以 App Store Connect 中實際出現且處理完成的 build 為準。
+版本 0.1.0，build 1，預設 Bundle ID `org.jiujinglab.ios`。2026-09-30 已成功上傳 App Store Connect（Xcode `EXPORT SUCCEEDED`）；Apple 處理與測試分發狀態另列下方。
 
 ## 仍需具備
 
 - 已註冊 Bundle ID `org.jiujinglab.ios`，已建立「揪鏡 JiuJing」App 記錄（Apple ID `6817397936`）。
-- Xcode 登入該帳號，完成 Apple 端要求的必要合約；不要將密碼／API 私鑰提交到 repo。
+- Xcode 已登入，Release archive 簽署及 App Store Connect 上傳成功；不要將密碼／API 私鑰提交到 repo。
 - 外部測試送審時仍需發佈者提供真實 Beta Review 聯絡姓名、電話及信箱。
 - 依 `device-validation.md` 完成真實 BLE／區網／權限驗收。
 - 外部 TestFlight 測試須經 Apple 的 Beta App Review；上傳成功不等於已可供外部測試。
@@ -37,10 +37,18 @@ DEVELOPMENT_TEAM=你的十碼TeamID BUNDLE_ID=org.jiujinglab.ios ./scripts/archi
 
 金源獎對原生 iOS 作品要求正式 App Store 上架網址；TestFlight 本身不滿足該項要求。
 
-## 本次發佈嘗試
+## 本次發佈結果（2026-09-30）
 
-已嘗試 Xcode 自動簽署，回報 `No Accounts: Add a new account in Accounts settings` 及缺少本 App 的 provisioning profile。App Store Connect 網頁已登入，但 Xcode 帳號仍未完成設定。本機既有其他 App 的 profile 不能替代此 App 的發佈設定。請在 Xcode 登入發佈用 Apple 帳號，再重試簽署與上傳。2026-09-29 重試仍回報相同錯誤；目前沒有已上傳建置。
+- 版本 `0.1.0 (1)`，Bundle ID `org.jiujinglab.ios`，Apple ID `6817397936`。
+- iPhone Simulator 9 項核心測試及 5 項 UI 測試全部通過（`TestFlightFinal.xcresult`）。
+- Release archive 簽署成功；Xcode 上傳回報 `Upload succeeded`、`EXPORT SUCCEEDED`。
+- Apple 正在處理建置，尚未開放外部測試或公開連結。
+- Beta 描述、行銷 URL、隱私政策 URL 及審查備註已於 App Store Connect 儲存。
+- 外部測試仍需真實審查聯絡資料及必要的 Apple Beta App Review。
+- 原始碼含核定 Logo，已合併 [PR #3](https://github.com/JiuJingLab/ios/pull/3)。
 
-[TestFlight 管理頁](https://appstoreconnect.apple.com/apps/6817397936/testflight)。公開隱私政策及支援頁均已部署至 GitHub Pages 並驗證 HTTP 200。
+[TestFlight 管理頁](https://appstoreconnect.apple.com/apps/6817397936/testflight)。公開隱私政策及支援頁均已部署至 GitHub Pages。
+
+簽署 archive 後，可使用本 repo 的 `release/ExportOptions-TestFlight.plist` 搭配 `xcodebuild -exportArchive` 上傳；其中不含金鑰或密碼。此設定保留手動指定的 build number，重傳不同二進位請先增加 build number。
 
 Apple 參考：[TestFlight overview](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview/)、[Upload builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)。
