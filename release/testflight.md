@@ -1,6 +1,6 @@
 # TestFlight 發佈資料
 
-版本 `0.2.0`，build `2`，Bundle ID `org.jiujinglab.ios`。v0.2 正在驗證與發佈；完成狀態會更新於下方紀錄。v0.1 已完成 Apple 處理並提供內部測試。
+版本 `0.2.0`，build `2`，Bundle ID `org.jiujinglab.ios`。2026-09-30 已成功上傳（`Upload succeeded`、`EXPORT SUCCEEDED`），Apple 已完成處理，並已加入 `v0.2 Internal QA`（1 位內部測試者、1 個建置）。v0.1 已完成 Apple 處理並提供內部測試。
 
 ## 仍需具備
 
@@ -60,4 +60,7 @@ Apple 參考：[TestFlight overview](https://developer.apple.com/help/app-store-
 - iPad Simulator：13 項核心測試及 2 項 UI 測試通過；實體相機案例明確跳過。
 - iPhone 15／iOS 26.6.1：1 項相機硬體測試通過（`V02HardwareRetry.xcresult`），驗證啟動、2×、補光開關、前後切換及停止。未擷取環境影像。
 - Release archive 簽署成功，版本與相機權限檢查通過；Release 不含 Debug 模擬資料。
-- TestFlight 上傳／處理及分發進行中；待 Apple 狀態確認後更新。
+- Xcode 上傳成功（2026-09-30 10:04 台北時間）；Apple 顯示 `Complete`，建置 `Ready to Test`。
+- 已建立 `v0.2 Internal QA`，手動分發 `0.2.0 (2)`，帳號持有人已加入。建置頁確認 1 個群組、1 位測試者，What to Test 已儲存。
+- [建置管理頁](https://appstoreconnect.apple.com/apps/6817397936/testflight/ios/0ff53bb7-61e6-4734-9d05-2d3f35144c2c)。外部公開測試尚未開放。
+- 新版 Beta 描述已儲存；審查備註儲存時 Apple 回報另有欄位不合法；審查聯絡欄位目前空白，已請發佈者補齊。此問題不阻擋上述內部測試。
