@@ -1,6 +1,6 @@
 # TestFlight 發佈資料
 
-版本 0.1.0，build 1，預設 Bundle ID `org.jiujinglab.ios`。2026-09-30 已成功上傳 App Store Connect（Xcode `EXPORT SUCCEEDED`）；Apple 處理與測試分發狀態另列下方。
+版本 `0.2.0`，build `2`，Bundle ID `org.jiujinglab.ios`。v0.2 正在驗證與發佈；完成狀態會更新於下方紀錄。v0.1 已完成 Apple 處理並提供內部測試。
 
 ## 仍需具備
 
@@ -15,9 +15,9 @@
 | 欄位 | 內容 |
 |---|---|
 | 名稱 | 揪鏡 JiuJing |
-| Beta App Description | 揪鏡是一款免費開源的隱私自我檢查工具。v0.1 可探索同一 Wi-Fi 的常見 TCP 端口與 Bonjour 服務，並掃描附近 BLE 廣播。顯示名稱、服務與訊號等可人工確認的線索，不會連線到藍牙裝置、不存取攝影機影像。資料只在手機記憶體處理，不上傳、不保存紀錄。結果不能確認或排除偷拍設備。 |
-| What to Test | 請使用自己有權測試的 Wi-Fi 與 BLE 設備。確認首次允許／拒絕權限、無 Wi-Fi、藍牙關閉、掃描進度、停止與重掃、背景停止、結果清除、端口及名稱命中理由。請回報機型、iOS 版本、操作步驟與預期／實際結果；截圖前請隱藏裝置資訊。 |
-| Review Notes | No account or login required. Use a physical iPhone or iPad. Select Wi-Fi or BLE, confirm permission to inspect the space/network, then tap Start. Local Network and Bluetooth permissions are requested only when scanning. LAN: IPv4 TCP connection checks on ports 80, 443, 554, 8554, 8000, 8080 and declared Bonjour services. BLE: passive advertisement discovery for 20 seconds; no pairing or peripheral connection. No camera/microphone/location access, cloud processing, tracking or analytics. Findings are heuristic clues, never a safety certification or proof of a camera. Simulator cannot validate BLE or local-network privacy. |
+| Beta App Description | 揪鏡是一款免費開源的隱私自我檢查工具。v0.2 可探索同一 Wi-Fi 的常見 TCP 端口與 Bonjour 服務，並掃描附近 BLE 廣播。顯示名稱、服務與訊號等可人工確認的線索，不會連線到藍牙裝置、不讀取其他設備的攝影機串流。新增清楚的結果總覽、待確認線索篩選，以及本機相機預覽、放大、補光及紅外線檢查指引；相機僅供人工觀察，不儲存、不上傳畫面，沒有自動 AI 判定。資料只在手機記憶體處理，不上傳、不保存紀錄。結果不能確認或排除偷拍設備。 |
+| What to Test | 請使用自己有權測試的 Wi-Fi 與 BLE 設備。確認首次允許／拒絕權限、無 Wi-Fi、藍牙關閉、掃描進度、停止與重掃、背景停止、結果清除、端口及名稱命中理由。另外測試大型結果卡、待確認篩選、部分結果／失敗提示、深色與大字；相機首次允許／拒絕、預覽、放大、補光、前後鏡頭、離頁及背景停止、紅外線指引。請回報機型、iOS 版本、操作步驟與預期／實際結果；截圖前請隱藏裝置資訊。 |
+| Review Notes | No account or login required. Use a physical iPhone or iPad. Select Wi-Fi or BLE, confirm permission to inspect the space/network, then tap Start. Local Network and Bluetooth permissions are requested only when scanning. LAN: IPv4 TCP connection checks on ports 80, 443, 554, 8554, 8000, 8080 and declared Bonjour services. BLE: passive advertisement discovery for 20 seconds; no pairing or peripheral connection. Optional Camera Assist uses AVFoundation for local preview, zoom (up to 4x when supported), torch and front/back switching after explicit user action and camera permission. It has no photo/video output, recording, image storage, upload or automated recognition. It stops on dismissal or backgrounding. The infrared guide is manual guidance, not a sensor or detector. No microphone/location access, cloud processing, tracking or analytics. Findings are heuristic clues, never a safety certification or proof of a camera. Simulator cannot validate BLE or local-network privacy. |
 | Sign-in required | No |
 | Feedback／Support URL | https://jiujinglab.github.io/docs/support/ |
 | Privacy Policy URL | https://jiujinglab.github.io/docs/privacy/ |
@@ -37,7 +37,7 @@ DEVELOPMENT_TEAM=你的十碼TeamID BUNDLE_ID=org.jiujinglab.ios ./scripts/archi
 
 金源獎對原生 iOS 作品要求正式 App Store 上架網址；TestFlight 本身不滿足該項要求。
 
-## 本次發佈結果（2026-09-30）
+## v0.1 發佈紀錄（2026-09-30）
 
 - 版本 `0.1.0 (1)`，Bundle ID `org.jiujinglab.ios`，Apple ID `6817397936`。
 - iPhone Simulator 9 項核心測試及 5 項 UI 測試全部通過（`TestFlightFinal.xcresult`）。
@@ -52,3 +52,12 @@ DEVELOPMENT_TEAM=你的十碼TeamID BUNDLE_ID=org.jiujinglab.ios ./scripts/archi
 簽署 archive 後，可使用本 repo 的 `release/ExportOptions-TestFlight.plist` 搭配 `xcodebuild -exportArchive` 上傳；其中不含金鑰或密碼。此設定保留手動指定的 build number，重傳不同二進位請先增加 build number。
 
 Apple 參考：[TestFlight overview](https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview/)、[Upload builds](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)。
+
+## v0.2 發佈紀錄（2026-09-30）
+
+- 開發分支：`v0.2`；版本 `0.2.0 (2)`。
+- iPhone Simulator：13 項核心測試與 8 項 UI 測試通過（`V02FinalTests.xcresult`），涵蓋深色／大字；1 項相機硬體案例在 Simulator 明確跳過。
+- iPad Simulator：13 項核心測試及 2 項 UI 測試通過；實體相機案例明確跳過。
+- iPhone 15／iOS 26.6.1：1 項相機硬體測試通過（`V02HardwareRetry.xcresult`），驗證啟動、2×、補光開關、前後切換及停止。未擷取環境影像。
+- Release archive 簽署成功，版本與相機權限檢查通過；Release 不含 Debug 模擬資料。
+- TestFlight 上傳／處理及分發進行中；待 Apple 狀態確認後更新。
