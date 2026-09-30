@@ -60,7 +60,7 @@ Apple 參考：[TestFlight overview](https://developer.apple.com/help/app-store-
 - iPad Simulator：13 項核心測試及 2 項 UI 測試通過；實體相機案例明確跳過。
 - iPhone 15／iOS 26.6.1：1 項相機硬體測試通過（`V02HardwareRetry.xcresult`），驗證啟動、2×、補光開關、前後切換及停止。未擷取環境影像。
 - Release archive 簽署成功，版本與相機權限檢查通過；Release 不含 Debug 模擬資料。
-- Xcode 上傳成功（2026-09-30 10:04 台北時間）；Apple 顯示 `Complete`，建置 `Ready to Test`。
+- Xcode 上傳成功（2026-09-30 10:04 台北時間）；Apple 顯示 `Complete`，加入內部測試者後，群組建置狀態為 `Testing`。
 - 已建立 `v0.2 Internal QA`，手動分發 `0.2.0 (2)`，帳號持有人已加入。建置頁確認 1 個群組、1 位測試者，What to Test 已儲存。
 - [建置管理頁](https://appstoreconnect.apple.com/apps/6817397936/testflight/ios/0ff53bb7-61e6-4734-9d05-2d3f35144c2c)。外部公開測試尚未開放。
 - 新版 Beta 描述已儲存；審查備註儲存時 Apple 回報另有欄位不合法；審查聯絡欄位目前空白，已請發佈者補齊。此問題不阻擋上述內部測試。
